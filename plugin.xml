@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.mecusorin.cordova.video"
+        version="1.0.0">
+    <engines>
+        <engine name="cordova-android" version=">=3.0.0"/>
+    </engines>
+    
+    <name>VideoPlayer</name>
+    <description>The video player allows you to display videos from your PhoneGap application.</description>
+    <author>Simon MacDonald(restructured by Mecu Sorin)</author>
+	<keywords>android, video player</keywords>
+	<repo>https://github.com/mecusorin/cordova-plugin-video.git</repo>
+    <license>MIT</license>
+    
+    <js-module src="www/videoplayer.js" name="VideoPlayer">
+        <clobbers target="VideoPlayer" />
+    </js-module>    
+    
+    <platform name="android">
+		<source-file src="src/android/VideoPlayer.java" target-dir="src/com/mecusorin/cordova/video" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="VideoPlayer" >
+                <param name="android-package" value="com.mecusorin.cordova.video.VideoPlayer"/>
+            </feature>
+        </config-file>
+    </platform>
+
+</plugin>
+
