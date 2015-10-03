@@ -1,23 +1,15 @@
+This is just a copy of the https://github.com/macdonst/VideoPlayer
+
 # VideoPlayer plugin for Phonegap #
 
 The video player allows you to display videos from your PhoneGap application.
 
 This command fires an Intent to have your devices video player show the video.
 
-## Adding the Plugin to your project ##
+## Installing ##
 
-Using this plugin requires [Android PhoneGap](https://github.com/apache/incubator-cordova-android).
+(cordova | ionic) plugin add https://github.com/MecuSorin/cordova-plugin-video.git
 
-1. To install the plugin, move www/video to your project's www folder and include a reference to it in your html file after phonegap.js.
-
-    &lt;script type="text/javascript" charset="utf-8" src="phonegap.js"&gt;&lt;/script&gt;<br/>
-    &lt;script type="text/javascript" charset="utf-8" src="video.js"&gt;&lt;/script&gt;
-    
-2. Create a directory within your project called "src/com/phonegap/plugins/video" and move VideoPlayer.java into it.
-
-3. In your res/xml/plugins.xml file add the following line:
-
-    &lt;plugin name="VideoPlayer" value="com.phonegap.plugins.video.VideoPlayer"/&gt;
 
 ## Using the plugin ##
 
@@ -25,7 +17,7 @@ The plugin creates the object `window.plugins.videoPlayer`.  To use, call the pl
 
 <pre>
   /**
-	* Display an intent to play the video.
+    * Display an intent to play the video.
     *
     * @param url           The url to play
     */
@@ -34,22 +26,13 @@ The plugin creates the object `window.plugins.videoPlayer`.  To use, call the pl
 
 Sample use:
 
+~~~~~~~~~~~~~
     window.plugins.videoPlayer.play("http://path.to.my/video.mp4");
     window.plugins.videoPlayer.play("file:///path/to/my/video.mp4");
     window.plugins.videoPlayer.play("file:///android_asset/www/path/to/my/video.mp4");
     window.plugins.videoPlayer.play("https://www.youtube.com/watch?v=en_sVVjWFKk");
 
-Note: When playing video from the assets folder, the video is first copied to internal storage with MODE_WORLD_READABLE.
-
-## RELEASE NOTES ##
-
-### October 2, 2011 ###
-
-* Initial release
-
-
-## BUGS AND CONTRIBUTIONS ##
-
+~~~~~~~~~~~~~
 
 ## LICENSE ##
 
