@@ -25,6 +25,7 @@
             <feature name="VideoPlayer" >
                 <param name="android-package" value="com.mecusorin.cordova.video.VideoPlayer"/>
             </feature>
+            <plugin name="VideoPlayer" value="com.mecusorin.cordova.video.VideoPlayer" />
         </config-file>
     </platform>
 
